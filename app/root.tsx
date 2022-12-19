@@ -7,12 +7,37 @@ import {
   Scripts,
   ScrollRestoration,
 } from "@remix-run/react";
-
+import styles from "~/css/index.css";
 export const meta: MetaFunction = () => ({
   charset: "utf-8",
   title: "New Remix App",
   viewport: "width=device-width,initial-scale=1",
 });
+
+export function links() {
+  return [
+    , {
+      rel: "stylesheet",
+      href: "https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap",
+    },
+    {
+      rel: "stylesheet",
+      href: "https://fonts.googleapis.com/css2?family=Material+Icons",
+    },
+    {
+      rel: "stylesheet",
+      href: "https://rsms.me/inter/inter.css"
+    },
+    {
+      rel: "stylesheet",
+      href: "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css",
+    },
+    {
+      rel: "stylesheet",
+      href: styles
+    }
+  ];
+}
 
 export default function App() {
   return (
