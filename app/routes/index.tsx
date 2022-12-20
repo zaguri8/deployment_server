@@ -13,7 +13,7 @@ interface Character {
 export default function Index() {
   return (
     <div style={{ fontFamily: "system-ui, sans-serif", lineHeight: "1.4" }}>
-      <Link to="/about">About</Link>
+      <Link to="/blog">Courses</Link>
       <Link to="/auth">Login</Link>
    
     </div>
