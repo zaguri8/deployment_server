@@ -55,6 +55,7 @@ export default function App() {
         <div className="logo_container">
           <img className="logo" src="assets/logo.ico" />
           <p>Cossci</p>
+          <a href="https://www.cossci.com/">Parent website</a>
         </div>
         <Outlet />
         <ScrollRestoration />
