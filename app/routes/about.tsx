@@ -2,7 +2,6 @@ import { json } from "@remix-run/node";
 import { Link, Links, useLoaderData } from "@remix-run/react";
 import { FunctionComponent, ReactNode } from "react";
 import Searchbar from "~/components/searchBar";
-import courseProvider from "~/providers/courseprovider";
 type CoursesWrapperProps = { courses: Course[] }
 interface Course {
     id: number;
@@ -33,16 +32,11 @@ const Courses = ({ courses }: CoursesWrapperProps) => {
 const CoursesComponent = CoursesWrapper(Courses)
 
 
-export async function loader() {
-    const courses = courseProvider()
-    return json(courses.generate())
-}
-
 export default function About() {
     return <div>
         <div className="header">  About title  </div>
         <div className="content">  About content  </div>
-        <Link to="/">Home</Link>
+        <Link to="/home">Home ?</Link>
         <CoursesComponent/>
     </div>
 }

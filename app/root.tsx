@@ -8,17 +8,22 @@ import {
   ScrollRestoration,
 } from "@remix-run/react";
 import styles from "~/css/index.css";
+import styles_blog from "~/css/blog.css";
+
 export const meta: MetaFunction = () => ({
   charset: "utf-8",
   title: "New Remix App",
   viewport: "width=device-width,initial-scale=1",
 });
-
 export function links() {
   return [
     , {
       rel: "stylesheet",
       href: "https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap",
+    },
+    {
+      rel: "stylesheet",
+      href: styles_blog
     },
     {
       rel: "stylesheet",
@@ -47,6 +52,10 @@ export default function App() {
         <Links />
       </head>
       <body>
+        <div className="logo_container">
+          <img className="logo" src="assets/logo.ico" />
+          <p>Cossci</p>
+        </div>
         <Outlet />
         <ScrollRestoration />
         <Scripts />

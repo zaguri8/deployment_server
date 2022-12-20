@@ -1,0 +1,134 @@
+
+.blog__container {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    margin: 32px;
+    margin-inline: auto;
+    box-sizing: border-box;
+    padding: 0 2rem;
+}
+
+.blog__header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 10rem;
+    width: 100%;
+}
+
+.blog__title {
+    font-size: 1.8rem;
+    font-weight: 600;
+    text-align: center;
+    color: white;
+}
+
+.blog__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+}
+
+.blog__pdf {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+}
+
+.blog__post {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 90%;
+    padding: 2rem;
+    border-radius: 1rem;
+}
+
+.blog__post__header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 10rem;
+    width: 100%;
+}
+
+.blog__post__title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: white;
+}
+
+.blog__post__date {
+    font-size: 1rem;
+    font-weight: 400;
+    color: white;
+}
+
+.blog__post__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 80%;
+    padding: 2rem;
+    box-shadow: 0px 0px 1px 1px rgba(220, 220, 220, 0.2);
+    border-radius: 1rem;
+}
+
+.blog__post__content p {
+    font-size: 1rem;
+    font-weight: 400;
+    color: white;
+}
+
+
+.blog__content__courses {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+    grid-gap: 1rem;
+}
+
+.blog__content__courses__course {
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0px 0px 1px 1px rgba(220, 220, 220, 0.2);
+    border-radius: 0.5rem;
+    background-color: rgba(8, 7, 7, 0.2);
+    padding: 1rem;
+}
+
+.blog__content__courses__course__image {
+    width: 100%;
+    height: 12rem;
+    border-radius: 0.2rem;
+    overflow: hidden;
+}
+
+.blog__content__courses__course__image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.blog__content__courses__course__title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin: 1rem 0;
+}
+
+.blog__content__courses__course__description {
+    font-size: 1rem;
+    font-weight: 400;
+    margin: 1rem 0;
+}
