@@ -20,11 +20,8 @@ export async function loader({ request }: { request: Request }) {
     const data = documents.docs.map((doc) => doc.data() as Course);
 
 
-    // read pdf file with fs
-    const pdf = fs.readFileSync('./public/pdf.pdf', 'utf8')
 
-
-    return json({ courses: data, pdf }, {
+    return json({ courses: data }, {
         headers: {
             "Cache-Control": "public, max-age=60",
         },
