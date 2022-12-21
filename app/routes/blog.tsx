@@ -1,16 +1,10 @@
-import { json, LinkDescriptor, LinksFunction } from "@remix-run/node";
-import { Link, Links, useLoaderData } from "@remix-run/react";
-import { collection, getDoc, getDocs } from "firebase/firestore";
-import { Fragment, useEffect, useState } from "react";
+import { json } from "@remix-run/node";
+import { Link, useLoaderData } from "@remix-run/react";
+import { collection, getDocs } from "firebase/firestore";
+import React, { Fragment, useState } from "react";
 import { database } from "~/providers/dbhook";
 import Course from "~/types/course";
 import GoogleAdsWrapper from '../components/GoogleAdsWrapper'
-import fs from 'fs'
-// generate blog styles with pdf page styles
-// match them to the classes assgigned in Blog component
-// blog page is a column flexbox
-// containing a header and a content with a pdf file
-// filling its center and a post with a header and content
 
 
 export async function loader({ request }: { request: Request }) {
@@ -50,7 +44,7 @@ export default function Blog() {
                     </h1>
                 </div>
                 <div className="blog__content__courses">
-                    {data.courses.map((course) => (
+                    {React.Children.toArray(data.courses.map((course) => (
                         <div className="blog__content__courses__course">
                             <div className="blog__content__courses__course__image">
                                 <img src={course.courseImageURL} alt="course image" />
@@ -65,7 +59,7 @@ export default function Blog() {
                                 התחל קורס
                             </Link>
                         </div>
-                    ))}
+                    )))}
                 </div>
             </Fragment>);
     };
@@ -74,7 +68,6 @@ export default function Blog() {
 
     return <GoogleAdsWrapper>
         <div className="blog__container">
-            <Links />
             <Courses />
         </div>
     </GoogleAdsWrapper>
