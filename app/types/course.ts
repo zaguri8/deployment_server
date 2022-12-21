@@ -3,6 +3,7 @@ interface Course {
     courseId: string
     courseSubject: string
     courseTitle: string
+    coursePDF:any,
     courseSubtitle: string
     coursePreviewURL?: string
     courseImageURL?:string

@@ -1,5 +1,6 @@
 import type { MetaFunction } from "@remix-run/node";
 import {
+  Link,
   Links,
   LiveReload,
   Meta,
@@ -53,7 +54,9 @@ export default function App() {
       </head>
       <body>
         <div className="logo_container">
+          <Link to={'/blog'}>
           <img className="logo" src="assets/logo.ico" />
+          </Link>
           <p>Cossci</p>
           <a href="https://www.cossci.com/">Parent website</a>
         </div>

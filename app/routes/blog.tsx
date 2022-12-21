@@ -1,5 +1,5 @@
 import { json, LinkDescriptor, LinksFunction } from "@remix-run/node";
-import { Links, useLoaderData } from "@remix-run/react";
+import { Link, Links, useLoaderData } from "@remix-run/react";
 import { collection, getDoc, getDocs } from "firebase/firestore";
 import { Fragment, useEffect, useState } from "react";
 import { database } from "~/providers/dbhook";
@@ -60,6 +60,9 @@ export default function Blog() {
                             <div className="blog__content__courses__course__description">
                                 {course.courseSubtitle}
                             </div>
+                            <Link to={`/course/${course.courseId}`}>
+                                התחל קורס
+                            </Link>
                         </div>
                     ))}
                 </div>

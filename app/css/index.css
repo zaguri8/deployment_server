@@ -48,6 +48,19 @@ body {
 
 }
 
+.pdf_container {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-direction: column;
+   height: 100%;
+   z-index: 9999;
+   max-width: 1250px;
+   margin-inline: auto;
+   width: 100%;
+   object-fit: cover;
+}
+
 .material-symbols-outlined {
    font-variation-settings:
       'FILL' 0,
