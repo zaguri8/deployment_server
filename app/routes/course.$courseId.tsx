@@ -4,7 +4,6 @@ import { doc, getDoc } from "firebase/firestore";
 import { json } from "react-router";
 import { database } from "~/providers/dbhook";
 import Course from "~/types/course";
-import PDFViewer from "~/components/PDFViewer";
 export async function loader({ request, params }: LoaderArgs) {
     const id = params.courseId;
     if (id) {
@@ -27,7 +26,6 @@ export default function WatchCourse() {
         <div className="course_container_details">
             <h1>{data.course.courseTitle}</h1>
             <div className="pdf_container">
-                <PDFViewer url={data.course.coursePDF}/>
             </div>
             <p>{data.course.courseDescription}</p>
         </div>
