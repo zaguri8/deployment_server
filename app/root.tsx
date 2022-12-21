@@ -55,7 +55,7 @@ export default function App() {
       <body>
         <div className="logo_container">
           <Link to={'/blog'}>
-          <img className="logo" src="assets/logo.ico" />
+            <img className="logo" src="assets/logo.ico" />
           </Link>
           <p>Cossci</p>
           <a href="https://www.cossci.com/">Parent website</a>
@@ -63,6 +63,8 @@ export default function App() {
         <Outlet />
         <ScrollRestoration />
         <Scripts />
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7861960382823701"
+          crossOrigin="anonymous"></script>
         <LiveReload />
       </body>
     </html>
