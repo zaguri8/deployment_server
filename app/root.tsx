@@ -10,14 +10,6 @@ import {
 } from "@remix-run/react";
 import styles from "~/css/index.css";
 import styles_blog from "~/css/blog.css";
-Object.defineProperty(Array.prototype, "at", {
-  value: function(i:any) {
-      if (i < 0)
-          i += this.length
-      return this[i]
-  },
-  enumerable: false
-})
 export const meta: MetaFunction = () => ({
   charset: "utf-8",
   title: "New Remix App",
@@ -51,8 +43,16 @@ export function links(): LinkDescriptor[] {
   }, {
     rel: 'prefetch',
     crossOrigin: "anonymous",
-    as:"script",
+    as: "script",
     href: "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7861960382823701"
+  }, {
+    rel: "prefetch",
+    as: "script",
+    href: "/file.js"
+  },
+  {
+    rel: "icon",
+    href: "assets/logo.ico"
   }
   ];
 }
@@ -76,7 +76,7 @@ export default function App() {
         <Outlet />
         <ScrollRestoration />
         <Scripts />
-        
+
         <LiveReload />
       </body>
     </html>

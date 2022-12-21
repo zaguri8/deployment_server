@@ -2,6 +2,7 @@ import { LoaderArgs } from "@remix-run/node";
 import { useLoaderData } from "@remix-run/react";
 import { doc, getDoc } from "firebase/firestore";
 import { json } from "react-router";
+import PDFViewer from "~/components/PDFViewer";
 import { database } from "~/providers/dbhook";
 import Course from "~/types/course";
 export async function loader({ request, params }: LoaderArgs) {
@@ -25,8 +26,7 @@ export default function WatchCourse() {
     return (
         <div className="course_container_details">
             <h1>{data.course.courseTitle}</h1>
-            <div className="pdf_container">
-            </div>
+            <PDFViewer file={data.course.coursePDF}/>
             <p>{data.course.courseDescription}</p>
         </div>
     )
