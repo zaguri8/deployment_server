@@ -9,7 +9,7 @@ export default class GoogleAdsWrapper extends React.Component {
         const installGoogleAds = () => {
             const elem = document.createElement("script");
             elem.src =
-                "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7861960382823701";
+                "//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7861960382823701";
             elem.async = true;
             elem.defer = true;
             document.body.insertBefore(elem, document.body.firstChild);
