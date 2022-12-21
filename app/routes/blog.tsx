@@ -4,6 +4,7 @@ import { collection, getDoc, getDocs } from "firebase/firestore";
 import { Fragment, useEffect, useState } from "react";
 import { database } from "~/providers/dbhook";
 import Course from "~/types/course";
+import GoogleAdsWrapper from '../components/GoogleAdsWrapper'
 import fs from 'fs'
 // generate blog styles with pdf page styles
 // match them to the classes assgigned in Blog component
@@ -71,8 +72,11 @@ export default function Blog() {
 
 
 
-    return <div className="blog__container">
-        <Links />
-        <Courses />
-    </div>
+    return <GoogleAdsWrapper>
+        <div className="blog__container">
+            <Links />
+            <Courses />
+        </div>
+    </GoogleAdsWrapper>
+
 }
