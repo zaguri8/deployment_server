@@ -9,6 +9,7 @@ import {
   ScrollRestoration,
 } from "@remix-run/react";
 import styles from "~/css/index.css";
+import GoogleAd from './components/GoogleAd';
 import styles_blog from "~/css/blog.css";
 
 export const meta: MetaFunction = () => ({
@@ -51,6 +52,8 @@ export default function App() {
       <head>
         <Meta />
         <Links />
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7861960382823701"
+          crossOrigin="anonymous"></script>
       </head>
       <body>
         <div className="logo_container">
@@ -61,9 +64,9 @@ export default function App() {
           <a href="https://www.cossci.com/">Parent website</a>
         </div>
         <Outlet />
+        <GoogleAd slot="9876543210" googleAdId="ca-pub-0123456789"/>
         <ScrollRestoration />
-        <script defer src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7861960382823701"
-          crossOrigin="anonymous"></script>
+
         <Scripts />
         <LiveReload />
       </body>
