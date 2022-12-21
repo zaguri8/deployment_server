@@ -62,9 +62,9 @@ export default function App() {
         </div>
         <Outlet />
         <ScrollRestoration />
-        <Scripts />
-        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7861960382823701"
+        <script defer src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7861960382823701"
           crossOrigin="anonymous"></script>
+        <Scripts />
         <LiveReload />
       </body>
     </html>
