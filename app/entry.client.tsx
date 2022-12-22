@@ -4,6 +4,7 @@ import { hydrateRoot } from "react-dom/client";
 
 function hydrate() {
   startTransition(() => {
+    
     hydrateRoot(
       document,
         <RemixBrowser />

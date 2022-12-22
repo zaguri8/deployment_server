@@ -8,6 +8,7 @@ import {
   Scripts,
   ScrollRestoration,
 } from "@remix-run/react";
+import Toolbar from "./components/toolbar";
 import styles from "./styles/app.css";
 export const meta: MetaFunction = () => ({
   charset: "utf-8",
@@ -39,7 +40,10 @@ export default function App() {
         <Links />
       </head>
       <body>
+        <Toolbar/>
+        <div className="lg:w-9/12 lg:self-end">
         <Outlet />
+        </div>
         <ScrollRestoration />
         <Scripts />
         <LiveReload />

@@ -16,7 +16,6 @@ body {
 
    display: flex;
    flex-direction: column;
-   background-color: rgb(30, 35, 39);
 }
 .logo {
    display: block;
@@ -63,6 +62,9 @@ body {
    margin-inline: auto;
    width: 100%;
    object-fit: cover;
+}
+.material-icons .black0 {
+   color:black;
 }
 
 .material-symbols-outlined {
