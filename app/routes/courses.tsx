@@ -25,7 +25,7 @@ export default function Courses() {
     return (
         <div className="grid lg:grid-cols-2 place-items-center gap-5 bg-gray">
             {courses.map(course => (
-                <div className="card-normal w-5/6 mt-8 mb-8 rounded-sm overflow-hidden  drop-shadow-lg">
+                <div key={course.courseId} className="card-normal w-5/6 mt-8 mb-8 rounded-sm overflow-hidden  drop-shadow-lg">
                     <div>
                         <img src={course.courseImageURL} className="image-full object-cover min-h-full pl-2 pr-2 max-h-72 mr-auto ml-auto" alt="course image" />
                         <label className={`

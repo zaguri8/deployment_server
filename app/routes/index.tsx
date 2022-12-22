@@ -1,5 +1,6 @@
 import { json, redirect } from "@remix-run/node";
-import { Link, useLoaderData } from "@remix-run/react";
+import { Link, useLoaderData, useNavigate } from "@remix-run/react";
+import { useEffect } from "react";
 
 interface Character {
   name: string;
@@ -8,15 +9,9 @@ interface Character {
   hair_color: string;
 }
 
-export async function loader() {
-  return redirect("/courses", { status: 200 });
-}
 
 export default function Index() {
-  const data = useLoaderData()
-  return (
-    <div className="grid grid-cols-4 text-cyan-600 dark:text-cyan-200">
-      {data}
-    </div>
-  );
+  const router = useNavigate()
+  useEffect(() => router('/courses'),[])
+  return null
 }

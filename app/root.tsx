@@ -8,6 +8,7 @@ import {
   Scripts,
   ScrollRestoration,
 } from "@remix-run/react";
+import { Suspense } from "react";
 import Toolbar from "./components/toolbar";
 import styles from "./styles/app.css";
 export const meta: MetaFunction = () => ({
@@ -41,12 +42,7 @@ export default function App() {
         <Links />
       </head>
       <body>
-        {process.env.NODE_ENV === "development" ? null : (
-          <script
-            async
-            crossOrigin="anonymous"
-            src={"https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7861960382823701"}
-          />)}
+      
         <Toolbar />
         <div className="lg:w-9/12 lg:self-end">
           <Outlet />
