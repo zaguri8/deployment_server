@@ -13,9 +13,10 @@ export async function loader() {
 }
 
 export default function Index() {
+  const data = useLoaderData()
   return (
     <div className="grid grid-cols-4 text-cyan-600 dark:text-cyan-200">
-   
+      {data}
     </div>
   );
 }
