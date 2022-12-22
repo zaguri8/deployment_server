@@ -27,12 +27,6 @@ export function links(): LinkDescriptor[] {
       href: "assets/logo.ico"
     },
     {
-      rel: 'preload',
-      href: "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7861960382823701",
-      as: "script",
-      crossOrigin: "anonymous"
-    },
-    {
       rel: "stylesheet",
       href: "https://fonts.googleapis.com/icon?family=Material+Icons"
     }
@@ -47,6 +41,12 @@ export default function App() {
         <Links />
       </head>
       <body>
+        {process.env.NODE_ENV === "development" ? null : (
+          <script
+            async
+            crossOrigin="anonymous"
+            src={"https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7861960382823701"}
+          />)}
         <Toolbar />
         <div className="lg:w-9/12 lg:self-end">
           <Outlet />
