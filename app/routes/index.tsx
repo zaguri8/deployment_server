@@ -1,8 +1,6 @@
 import { json } from "@remix-run/node";
 import { Link, useLoaderData } from "@remix-run/react";
 
-
-
 interface Character {
   name: string;
   height: string;
@@ -12,10 +10,16 @@ interface Character {
 
 export default function Index() {
   return (
-    <div style={{ fontFamily: "system-ui, sans-serif", lineHeight: "1.4" }}>
-      <Link to="/blog">Courses</Link>
-      <Link to="/auth">Login</Link>
-   
+    <div className="grid grid-cols-4 text-cyan-600 dark:text-cyan-200">
+      <label className="text-sky-500 bg-slate-600">
+        Hello
+      </label>
+      <label className="text-sky-500">
+        Hello
+      </label>
+      <label className="text-sky-500">
+        Hello
+      </label>
     </div>
   );
 }

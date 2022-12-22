@@ -1,4 +1,4 @@
-FROM node:16.3.0-alpine
+FROM node:19-alpine3.16
 
 WORKDIR /app
 
@@ -6,10 +6,10 @@ ENV NODE_ENV development
 
 COPY package.json .
 
-RUN npm install --development
+RUN npm install
 
 COPY . .
 
 EXPOSE 3000
 
-CMD ["npx", "@remix-run/dev", "dev"]
+CMD ["npm", "run", "dev"]

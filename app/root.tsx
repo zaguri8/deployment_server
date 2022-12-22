@@ -8,8 +8,7 @@ import {
   Scripts,
   ScrollRestoration,
 } from "@remix-run/react";
-import styles from "~/css/index.css";
-import styles_blog from "~/css/blog.css";
+import styles from "./styles/app.css";
 export const meta: MetaFunction = () => ({
   charset: "utf-8",
   title: "New Remix App",
@@ -17,43 +16,18 @@ export const meta: MetaFunction = () => ({
 });
 
 export function links(): LinkDescriptor[] {
-  return [{
+  return [
+   {
     rel: "stylesheet",
-    href: "https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap",
-  },
-  {
-    rel: "stylesheet",
-    href: styles_blog
-  },
-  {
-    rel: "stylesheet",
-    href: "https://fonts.googleapis.com/css2?family=Material+Icons",
-  },
-  {
-    rel: "stylesheet",
-    href: "https://rsms.me/inter/inter.css"
-  },
-  {
-    rel: "stylesheet",
-    href: "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css",
-  },
-  {
-    rel: "stylesheet",
-    href: styles
-  }, {
-    rel: 'prefetch',
-    crossOrigin: "anonymous",
-    as: "script",
-    href: "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7861960382823701"
-  }, {
-    rel: "prefetch",
-    as: "script",
-    href: "/file.js"
-  },
+    href:styles
+   },
   {
     rel: "icon",
     href: "assets/logo.ico"
-  }
+  },
+  {
+    rel: "stylesheet",
+    href:"https://fonts.googleapis.com/icon?family=Material+Icons" }
   ];
 }
 
@@ -63,20 +37,11 @@ export default function App() {
       <head>
         <Meta />
         <Links />
-
       </head>
       <body>
-        <div className="logo_container">
-          <Link to={'/blog'}>
-            <img className="logo" src="assets/logo.ico" />
-          </Link>
-          <p>Cossci</p>
-          <a href="https://www.cossci.com/">Parent website</a>
-        </div>
         <Outlet />
         <ScrollRestoration />
         <Scripts />
-
         <LiveReload />
       </body>
     </html>

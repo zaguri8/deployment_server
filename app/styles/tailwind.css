@@ -1,5 +1,9 @@
 @import url(https://fonts.googleapis.com/earlyaccess/opensanshebrew.css);
 @import url(https://fonts.googleapis.com/earlyaccess/opensanshebrewcondensed.css);
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 * {
    font-family: Open Sans Hebrew;
 }
