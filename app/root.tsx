@@ -18,17 +18,23 @@ export const meta: MetaFunction = () => ({
 
 export function links(): LinkDescriptor[] {
   return [
-   {
-    rel: "stylesheet",
-    href:styles
-   },
-  {
-    rel: "icon",
-    href: "assets/logo.ico"
-  },
-  {
-    rel: "stylesheet",
-    href:"https://fonts.googleapis.com/icon?family=Material+Icons" }
+    {
+      rel: "stylesheet",
+      href: styles
+    },
+    {
+      rel: "icon",
+      href: "assets/logo.ico"
+    },
+    {
+      rel: 'preload',
+      href: "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7861960382823701",
+      as: "script"
+    },
+    {
+      rel: "stylesheet",
+      href: "https://fonts.googleapis.com/icon?family=Material+Icons"
+    }
   ];
 }
 
@@ -40,9 +46,9 @@ export default function App() {
         <Links />
       </head>
       <body>
-        <Toolbar/>
+        <Toolbar />
         <div className="lg:w-9/12 lg:self-end">
-        <Outlet />
+          <Outlet />
         </div>
         <ScrollRestoration />
         <Scripts />
