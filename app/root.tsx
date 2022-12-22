@@ -29,7 +29,8 @@ export function links(): LinkDescriptor[] {
     {
       rel: 'preload',
       href: "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7861960382823701",
-      as: "script"
+      as: "script",
+      crossOrigin: "anonymous"
     },
     {
       rel: "stylesheet",
